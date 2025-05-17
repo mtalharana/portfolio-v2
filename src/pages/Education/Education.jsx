@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import EducationLoader from "@/components/ui/EducationLoader";
+import  { useState } from "react";
 import {
-  Star,
   Award,
   Calendar,
   BookOpen,
-  GraduationCap,
   Trophy,
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -16,23 +13,24 @@ const EducationSection = () => {
   const educationData = [
     {
       degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
+      school: "Feni Alia Kamil - M.A Madrasah ",
       mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
+      year: "2020",
+      achievements: ["GPA: 4.0 (Out of 5)", "Subject: Science"],
       skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        " Acquired a strong foundation in science and mathematics, fostering analytical and problem-solving skills.",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      degree: "Diploma in Computer Science (CSE)",
+      school: "Institute of Computer Science and Technology (ICST)",
+      mascot: "💻",
+      
+      year: "2020-2024",
+      achievements: ["GPA: 3.47 (Out of 4)", "Subject: Computer Science"],
+      skills: ["Web Development", "Data Structure", "Database Management Systems",],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Acquired foundational knowledge in computer science, programming languages, and software development principles.",
     },
   ];
 
@@ -67,7 +65,7 @@ const EducationSection = () => {
         <div className="absolute inset-0 border border-white/[0.05] grid grid-cols-2 md:grid-cols-4" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 relative z-10 capitalize">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,8 +76,7 @@ const EducationSection = () => {
             Educational Journey
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shapes innovative thinking and
-            professional growth.
+            My educational journey has been transformative, equipping me with the expertise to excel in my field.
           </p>
         </motion.div>
 

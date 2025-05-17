@@ -5,45 +5,38 @@ import PropTypes from "prop-types";
 
 const projects = [
   {
-    title: "Olova! A Lightweight JavaScript Library",
+    title: "Portfolio - Previous Version 🔥",
     description:
-      "A lightweight JavaScript library for creating beautiful, responsive UI components.",
-    src: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
-    color: "#5196fd",
-    githubLink: "https://github.com/olovajs/olova",
-    liveLink: "https://olova.js.org/",
+      "portfolio A sleek and responsive portfolio website built with React and Tailwind CSS. framer Motion for smooth for animations. design created using figma  💻✨",
+
+    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747502779/w25knkkuhydkv39xfdhx.png",
+    color: "#0be890",
+    githubLink: "https://github.com/MDmohiuddin-web/portfolio",
+    liveLink: "https://mohiuddin-portfolio.vercel.app/",
   },
   {
-    title: "A sleek portfolio built with React and Tailwind CSS ",
+    title: "FashionFusing  built with React and Tailwind CSS ",
     description:
-      "A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
-    src: "tree.jpg",
-    link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
+      "FashionFusing is a fashion e-commerce website built with React and Tailwind CSS. It offers a seamless shopping experience with a wide range of clothing and accessories.",
+
+    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747502995/zppranpjgq653b7ek2lh.png",
     color: "#8f89ff",
-    githubLink: "https://github.com/seraprogrammer/portfolio",
-    liveLink: "https://codervai.vercel.app",
+    githubLink: "https://github.com/MDmohiuddin-web/FashionFusing-Clint",
+    liveLink: "https://fashionfusing.netlify.app/",
   },
+  
+
   {
-    title: "🚀 CodeWhisperer",
+    title: "interior-desigin",
     description:
-      "🚀 CodeWhisperer A powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "water.jpg",
-    link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
+      "Landing page for interior design built with React and Tailwind CSS. design created using framer Motion for smooth for animations  💻✨",
+
+    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747503121/rs4ksl4ny18zugirpja4.png",
     color: "#fff",
-    githubLink: "https://github.com/seraprogrammer/codewhisperer",
-    liveLink: "https://codewhisperer.vercel.app/",
+    githubLink: "https://github.com/MDmohiuddin-web/Interior-design-landingpage",
+    liveLink: "https://interior-desigin.netlify.app/",
   },
-  {
-    title: "CodeKori 🔥",
-    description:
-      "CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/cHQr4fpR/Annotation-2025-04-01-205350.png",
-    color: "#ed649e",
-    githubLink: "https://github.com/seraprogrammer/CodeKori",
-    liveLink: "https://codekori.js.org",
-  },
+
 ];
 
 export default function Projects() {

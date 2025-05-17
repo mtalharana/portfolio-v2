@@ -1,5 +1,5 @@
-import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+
+import { Code2,  Computer ,GalleryThumbnails } from "lucide-react";
 
 const ExperienceCard = ({
   title,
@@ -18,18 +18,18 @@ const ExperienceCard = ({
     <div className="relative bg-gray-900/90 rounded-lg p-8 h-full border border-gray-800/50 shadow-xl backdrop-blur-xl">
       {/* Floating icon with pulse effect */}
       <div className="relative mb-6">
-        <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl group-hover:opacity-75 animate-pulse transition-all duration-500" />
-        <Icon className="w-12 h-12 text-cyan-400 relative z-10 transform group-hover:rotate-12 transition-transform duration-300" />
+        <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl " />
+        <Icon className="w-12 h-12 text-cyan-400 relative z-10 " />
       </div>
 
       {/* Content with improved typography */}
-      <div className="space-y-3">
+      <div className="space-y-3 capitalize">
         <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
           {title}
         </h3>
-        <div className="flex justify-between items-center text-gray-300">
+        <div className="flex flex-col justify-between items-start text-gray-300 space-y-2">
           <span className="font-semibold text-blue-400">{company}</span>
-          <span className="text-sm font-mono bg-blue-500/10 px-3 py-1 rounded-full">
+          <span className="text-sm font-mono bg-blue-500/10 px-2  py-1 rounded-md ">
             {period}
           </span>
         </div>
@@ -54,28 +54,44 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
+      icon: Computer ,
+      title: "jr. Mern Stack Developer",
+      company: "talent people",
+
+      period: " October 2024 – December 2024 ",
+
       description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
-    },
-    {
-      icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
-      description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+        `Created a full-stack web application using the MERN stack, including user authentication, data management, and responsive design.
+        Collaborated with a team to implement RESTful APIs and integrate third-party sms services.
+        Demonstrated proficiency in React, Node.js, Express.js, and MongoDB.`,
     },
     {
       icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
-      period: "2023 - Present",
+      title: " Frontend Developer",
+      company: " Freelancing ",
+      period: "December 2024 -January 2025 ",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+        "created responsive and user-friendly web applications using Next.js and Tailwind CSS. Nodemailer for email service integration.",
+    },
+    {
+      icon: Code2,
+      title: "Frontend Developer",
+      company: "Freelancing",
+      period: " February 2025 ",
+
+      description:
+        `created a responsive and user-friendly web application using next.js,typeScript and Tailwind CSS. for sports management system.
+        and also make ui ux design using figma.`,
+    },
+
+    {
+      icon: GalleryThumbnails,
+      title: "Full Stack Developer",
+      company: "Freelancing",
+      period: " March 2025 - may 2025 ",
+
+      description:
+        `created a responsive and user-friendly web application using next.js and Tailwind CSS.notion for store data and nodemailer for email service integration for e-commerce website. and also added animations and transitions to enhance user experience. using framer motion and gsap library.`,
     },
   ];
 
@@ -114,7 +130,7 @@ const ExperienceSection = () => {
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
             </div>
             <p className="text-lg md:text-xl text-gray-400 font-medium tracking-wide text-center max-w-2xl">
-              "Transforming ideas into digital reality, one project at a time"
+              {`Transforming ideas into digital reality, one project at a time`}
             </p>
           </div>
 

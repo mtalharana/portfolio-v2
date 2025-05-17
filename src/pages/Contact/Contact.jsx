@@ -1,6 +1,15 @@
-import React, { useState } from "react";
-import { Send, Phone, MapPin, Mail } from "lucide-react";
+import { useState } from "react";
+import { Send, MapPin, Mail } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
+import {
+  FaGithub,
+  FaLinkedin,
+  FaSquareFacebook,
+  FaSquareWhatsapp,
+  FaSquareXTwitter,
+} from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -53,9 +62,21 @@ export default function Contact() {
 
     // Create a new FormData object to send to Web3Forms API
     const form = new FormData();
-    form.append("access_key", "90f4b8af-e590-42b0-beaf-10b18f66a703"); // Replace with your Web3Forms access key
+    form.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+    // form.append("access_key", "YOUR_ACCESS_KEY"); // Replace with your Web3Forms access key
+
+    // https://web3forms.com/ => goto ths site and Create your Access Key 
+    // create .env file in root directory and add your access key 
+    // or you can directly add your access key here
+
+
+
+
+
+
     form.append("name", formData.name);
     form.append("email", formData.email);
+    form.append("phone", formData.phone || ""); // Optional field
     form.append("subject", formData.subject || "New Contact Form Submission");
     form.append("message", formData.message);
 
@@ -95,6 +116,7 @@ export default function Contact() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Contact Info */}
+
             <div className="space-y-8">
               <div>
                 <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -105,26 +127,58 @@ export default function Contact() {
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-purple-500/10 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-purple-400" />
+              <div className="space-y-8">
+                {[
+                  {
+                    icon: <FaWhatsapp className="w-6 h-6 text-green-500" />,
+                    label: "Phone",
+                    link: "https://wa.me/+8801865540885",
+                    text: "+880 1865540885",
+                  },
+                  {
+                    icon: <Mail className="w-6 h-6 text-purple-400" />,
+                    label: "Email",
+                    link: "mailto:mohiu5204@gmail.com",
+                    text: "mohiu5204@gmail.com",
+                  },
+                  {
+                    icon: <MapPin className="w-6 h-6 text-red-500" />,
+                    label: "Location",
+                    
+                    text: "Feni, Chattogram, Bangladesh - Feni Elahigonj",
+                  },
+                  {
+                    icon: <FaLinkedin className="w-6 h-6 text-blue-500" />,
+                    label: "Linkedin",
+                    link: "https://www.linkedin.com/in/mohammedmohiuddin/",
+                    text: "Connect with me on LinkedIn",
+                  },
+                  {
+                    icon: <FaGithub className="w-6 h-6" />,
+                    label: "Github",
+                    link: "https://github.com/MDmohiuddin-web",
+                    text: "Check out my GitHub",
+                  },
+                ].map((item, index) => (<>
+                  <div key={index + 1} className="flex items-center space-x-4">
+                    <div className="bg-pink-500/10 p-3 rounded-lg">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{item.label}</h3>
+                      {item.link ? (
+                        <a href={item.link} target="_blank" className="text-blue-600 capitalize cursor-pointer hover:text-white duration-500">
+                          {item.text}
+                        </a>
+                      ) : (
+                        <p className="text-gray-400">{item.text}</p>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">olovajs@gmail.com</p>
-                  </div>
-                </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="bg-pink-500/10 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-pink-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Laxmipure, Natore 6400</p>
-                  </div>
-                </div>
+
+                </>
+                ))}
               </div>
             </div>
 
@@ -136,9 +190,8 @@ export default function Contact() {
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.name ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.name ? "border-red-500" : "border-gray-700"
+                        } focus:border-blue-500 focus:outline-none transition-colors`}
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -153,9 +206,8 @@ export default function Contact() {
                     <input
                       type="email"
                       placeholder="Your Email"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.email ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.email ? "border-red-500" : "border-gray-700"
+                        } focus:border-blue-500 focus:outline-none transition-colors`}
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
@@ -167,14 +219,31 @@ export default function Contact() {
                       </p>
                     )}
                   </div>
+                  <div>
+                    <input
+                      type="tel"
+                      placeholder="Your Phone Number Or WhatsApp Number"
+
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.phone ? "border-red-500" : "border-gray-700"
+                        } focus:border-blue-500 focus:outline-none transition-colors`}
+                      value={formData.phone || ""}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
+                    />
+                    {errors.phone && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.phone}
+                      </p>
+                    )}
+                  </div>
 
                   <div>
                     <input
                       type="text"
                       placeholder="Subject"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.subject ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors`}
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.subject ? "border-red-500" : "border-gray-700"
+                        } focus:border-blue-500 focus:outline-none transition-colors`}
                       value={formData.subject}
                       onChange={(e) =>
                         setFormData({ ...formData, subject: e.target.value })
@@ -187,13 +256,13 @@ export default function Contact() {
                     )}
                   </div>
 
+
                   <div>
                     <textarea
                       placeholder="Your Message"
                       rows="4"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${
-                        errors.message ? "border-red-500" : "border-gray-700"
-                      } focus:border-blue-500 focus:outline-none transition-colors resize-none`}
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.message ? "border-red-500" : "border-gray-700"
+                        } focus:border-blue-500 focus:outline-none transition-colors resize-none`}
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
@@ -219,11 +288,10 @@ export default function Contact() {
               {/* Status Message */}
               {status && (
                 <div
-                  className={`mt-4 text-center ${
-                    status.includes("success")
-                      ? "text-green-400"
-                      : "text-red-400"
-                  }`}
+                  className={`mt-4 text-center ${status.includes("success")
+                    ? "text-green-400"
+                    : "text-red-400"
+                    }`}
                 >
                   <p>{status}</p>
                 </div>
@@ -232,6 +300,14 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+
+
+
+
     </main>
   );
 }
+
+
+

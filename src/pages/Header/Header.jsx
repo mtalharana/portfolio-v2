@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import {
   FaHome,
   FaLaptopCode,
-  FaUser,
+ 
   FaBriefcase,
   FaGraduationCap,
   FaCode,
@@ -29,6 +29,7 @@ export default function Header() {
   const navLinks = [
     { id: "home", icon: FaHome, text: "Home", path: "/" },
     { id: "skills", icon: FaCode, text: "Skills", path: "/skills" },
+    { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
     {
       id: "experience",
       icon: FaBriefcase,
@@ -41,7 +42,7 @@ export default function Header() {
       text: "Education",
       path: "/education",
     },
-    { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
+    
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
   ];
 

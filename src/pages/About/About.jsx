@@ -1,5 +1,5 @@
 import HeroImg from "@/assets/images/hero.jpg";
-import OlovaLogo from "@/assets/images/olova.png";
+
 
 export default function About() {
   return (
@@ -24,45 +24,33 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                Hello! I'm Nazmul Hossain, a passionate JavaScript developer
+                {`Hello! I'm Mohi Uddin, a passionate JavaScript developer
                 specializing in creating innovative web solutions and
-                user-friendly interfaces.{" "}
+                user-friendly interfaces.`}
                 <span className="font-bold text-white">
-                  As the creator of the OlovaJS UI Framework
+                  Using React & Next.js Framework
                 </span>
-                , I'm dedicated to simplifying development workflows.
+                ,{` I'm dedicated to simplifying development workflows.`}
               </p>
               <p className="text-white">
-                My focus is on making web development faster, easier, and
+                {`My focus is on making web development faster, easier, and
                 accessible to all developers. Currently, I'm expanding into
                 backend development to grow as a full-stack developer and create
-                seamless, robust web applications.
+                seamless, secure web applications.`}
               </p>
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white">
-                    I'm a lifelong learner and innovator, driven by a desire to
-                    contribute to the developer community with new ideas and
-                    tools that deliver real value. As the creator of OlovaJS,
-                    I'm pushing the boundaries of JavaScript frameworks to
-                    empower developers worldwide.
+                   {`I' am a lifelong learner and a dedicated supporter of the developer community, committed to creating new and effective tools and ideas to empower developers. As the creator of the Frontend Developer Squad at app.daily.dev, I am championing new technologies to help developers build better and more efficient applications. I share this knowledge and experience with my community, so that we can all move forward together.`}
                   </p>
 
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
-                      Nazmul Hossain, Creator of
+                      Mohi Uddin, Creator of the Frontend Developer Squad at 
+                      <a href="https://app.daily.dev/mdmohiuddin" target="_blank" rel="noopener noreferrer" className="text-blue-400"> app.daily.dev</a>
                     </cite>
-                    <div className="flex items-center gap-2">
-                      <img
-                        className="h-5 w-fit"
-                        src={OlovaLogo}
-                        alt="Olova Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span className="text-white">OlovaJS</span>
-                    </div>
+                    
                   </div>
                 </blockquote>
               </div>
