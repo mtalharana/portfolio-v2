@@ -5,11 +5,9 @@ import { FaWhatsapp } from "react-icons/fa";
 import {
   FaGithub,
   FaLinkedin,
-  FaSquareFacebook,
-  FaSquareWhatsapp,
-  FaSquareXTwitter,
+ 
 } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -142,12 +140,6 @@ export default function Contact() {
                     text: "mohiu5204@gmail.com",
                   },
                   {
-                    icon: <MapPin className="w-6 h-6 text-red-500" />,
-                    label: "Location",
-                    
-                    text: "Feni, Chattogram, Bangladesh - Feni Elahigonj",
-                  },
-                  {
                     icon: <FaLinkedin className="w-6 h-6 text-blue-500" />,
                     label: "Linkedin",
                     link: "https://www.linkedin.com/in/mohammedmohiuddin/",
@@ -158,6 +150,13 @@ export default function Contact() {
                     label: "Github",
                     link: "https://github.com/MDmohiuddin-web",
                     text: "Check out my GitHub",
+                  },
+
+                  {
+                    icon: <MapPin className="w-6 h-6 text-red-500" />,
+                    label: "Location",
+
+                    text: "Feni, Chattogram, Bangladesh - Feni Elahigonj",
                   },
                 ].map((item, index) => (<>
                   <div key={index + 1} className="flex items-center space-x-4">
