@@ -24,7 +24,7 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                {`Hello! I'm Mohi Uddin, a passionate JavaScript developer
+                {`Hello! I'm Talha Rana, a passionate JavaScript developer
                 specializing in creating innovative web solutions and
                 user-friendly interfaces.`}
                 <span className="font-bold text-white">

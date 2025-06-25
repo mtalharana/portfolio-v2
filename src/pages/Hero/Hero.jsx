@@ -42,13 +42,17 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript & TypeScript Lover",
-    "React & NextJS Developer",
-    "Learning MARN Stack",
-    "Git & GitHub for Version Control",
-    "Passionate about Clean Code",
+    "Hi, I'm Talha Rana.",
+    "I build with Flutter.",
+    "One codebase. Every screen.",
+    "Frontend to backend.",
+    "Clean UI. Robust logic.",
+    "Fast. Scalable. Beautiful.",
+    "End-to-end. By design.",
   ];
+  
+  
+  
   // 'GraphQL', 'Docker', 'AWS','MySQL','Git', 'Linux', 'Discord Development'
   const [code] = useState(`
 const profile = {
@@ -192,7 +196,7 @@ const profile = {
                     I&apos;m
                     <span className="typing-effect gradient-text">
                       
-                      Mohi Uddin
+                      Talha Rana
                     </span>
                   </span>
                 </h1>
