@@ -47,8 +47,7 @@ export default function Hero() {
     "One codebase. Every screen.",
     "Frontend to backend.",
     "Clean UI. Robust logic.",
-    "Fast. Scalable. Beautiful.",
-    "End-to-end. By design.",
+    "Fast. Scalable. Beautiful. End-to-end.",
   ];
   
   
