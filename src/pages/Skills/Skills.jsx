@@ -2,7 +2,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
 import { Code2, Database, Layout, Cpu, Cloud } from "lucide-react";
-import { FaReact, FaGithub, FaLinux, FaFigma, FaSwift, FaAndroid } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaLinux,
+  FaFigma,
+  FaGithub,
+  FaJsSquare,
+  FaSwift,
+  FaAndroid,
+} from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -23,34 +33,18 @@ import {
   SiPaypal,
   SiTwilio,
   SiOpenai,
-  SiJira,
-  SiTrello,
-  SiAsana,
-  SiClickup,
-  SiSlack,
-  SiNotion,
-  SiConfluence,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
-import { BsFileEarmarkCode } from "react-icons/bs";
-
-// Import official SVG logos as React components
-import { ReactComponent as VueLogo } from "./logos/vue.svg";
-import { ReactComponent as BootstrapLogo } from "./logos/bootstrap.svg";
-import { ReactComponent as ExpressLogo } from "./logos/express.svg";
-import { ReactComponent as DjangoLogo } from "./logos/django.svg";
-import { ReactComponent as LaravelLogo } from "./logos/laravel.svg";
-import { ReactComponent as RESTLogo } from "./logos/rest.svg";
-import { ReactComponent as AndroidStudioLogo } from "./logos/android-studio.svg";
-import { ReactComponent as XcodeLogo } from "./logos/xcode.svg";
-import { ReactComponent as TeamsLogo } from "./logos/teams.svg";
+import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
   <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
     <CardContent className="p-6 relative z-10">
       <div className="flex items-center gap-4 mb-6">
-        <div className={`p-3 rounded-xl bg-gray-800/50 ${color} group-hover:scale-110 transition-transform duration-300`}>
+        <div
+          className={`p-3 rounded-xl bg-gray-800/50 ${color} group-hover:scale-110 transition-transform duration-300`}
+        >
           <Icon className="w-8 h-8" />
         </div>
         <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
@@ -79,31 +73,28 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       icon: Code2,
-      title: "Web & Frontend",
+      title: "Frontend & Web",
       color: "text-blue-400",
       skills: [
         { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
         { name: "Next.js", icon: <SiNextdotjs className="w-4 h-4 text-white" /> },
-        { name: "Vue.js", icon: <VueLogo className="w-4 h-4" /> },
+        { name: "Vue.js", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#42B883]" /> },
         { name: "Flutter (Web)", icon: <SiFlutter className="w-4 h-4 text-[#02569B]" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" /> },
-        { name: "Bootstrap", icon: <BootstrapLogo className="w-4 h-4" /> },
       ],
     },
     {
       icon: Database,
-      title: "Backend & Data",
+      title: "Backend & Databases",
       color: "text-green-400",
       skills: [
-        { name: "Express.js", icon: <ExpressLogo className="w-4 h-4" /> },
-        { name: "Django", icon: <DjangoLogo className="w-4 h-4" /> },
-        { name: "Laravel", icon: <LaravelLogo className="w-4 h-4" /> },
+        { name: "Express.js", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#000000]" /> },
+        { name: "Django", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#092E20]" /> },
+        { name: "Laravel", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#FF2D20]" /> },
         { name: "Firebase", icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" /> },
         { name: "Supabase", icon: <SiSupabase className="w-4 h-4 text-[#3ECF8E]" /> },
         { name: "MongoDB", icon: <SiMongodb className="w-4 h-4 text-[#47A248]" /> },
         { name: "PostgreSQL", icon: <SiPostgresql className="w-4 h-4 text-[#336791]" /> },
-        { name: "GraphQL", icon: <SiGraphql className="w-4 h-4 text-[#E10098]" /> },
-        { name: "REST APIs", icon: <RESTLogo className="w-4 h-4" /> },
       ],
     },
     {
@@ -113,19 +104,8 @@ const SkillsSection = () => {
       skills: [
         { name: "Flutter", icon: <SiFlutter className="w-4 h-4 text-[#02569B]" /> },
         { name: "React Native", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-        { name: "iOS (SwiftUI/UIKit)", icon: <FaSwift className="w-4 h-4 text-[#F05138]" /> },
-        { name: "Android (Jetpack Compose)", icon: <SiKotlin className="w-4 h-4 text-[#A97BFF]" /> },
-      ],
-    },
-    {
-      icon: Layout,
-      title: "UI/UX & Prototyping",
-      color: "text-pink-400",
-      skills: [
-        { name: "Figma", icon: <FaFigma className="w-4 h-4 text-[#F24E1E]" /> },
-        { name: "Responsive Design", icon: <Layout className="w-4 h-4 text-[#38B2AC]" /> },
-        { name: "Wireframing", icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" /> },
-        { name: "Prototyping", icon: <BsGrid1X2 className="w-4 h-4 text-[#F59E0B]" /> },
+        { name: "iOS", icon: <FaSwift className="w-4 h-4 text-[#F05138]" /> },
+        { name: "Android", icon: <SiKotlin className="w-4 h-4 text-[#A97BFF]" /> },
       ],
     },
     {
@@ -133,7 +113,7 @@ const SkillsSection = () => {
       title: "Cloud & Deployment",
       color: "text-orange-400",
       skills: [
-        { name: "Firebase Hosting", icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" /> },
+        { name: "Firebase", icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" /> },
         { name: "Supabase", icon: <SiSupabase className="w-4 h-4 text-[#3ECF8E]" /> },
         { name: "Netlify", icon: <SiNetlify className="w-4 h-4 text-[#00C7B7]" /> },
         { name: "Vercel", icon: <SiVercel className="w-4 h-4 text-white" /> },
@@ -146,13 +126,13 @@ const SkillsSection = () => {
       color: "text-pink-400",
       skills: [
         { name: "VS Code", icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" /> },
-        { name: "Android Studio", icon: <AndroidStudioLogo className="w-4 h-4" /> },
-        { name: "Xcode", icon: <XcodeLogo className="w-4 h-4" /> },
+        { name: "Android Studio", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#3DDC84]" /> },
+        { name: "Xcode", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#007AFF]" /> },
       ],
     },
     {
       icon: Cpu,
-      title: "Payments, Messaging & AI",
+      title: "Payments, Notifications & AI",
       color: "text-yellow-400",
       skills: [
         { name: "Stripe", icon: <SiStripe className="w-4 h-4 text-[#635BFF]" /> },
@@ -162,22 +142,8 @@ const SkillsSection = () => {
         { name: "OpenAI APIs", icon: <SiOpenai className="w-4 h-4 text-[#412991]" /> },
       ],
     },
-    {
-      icon: Cpu,
-      title: "Project Management & Collaboration",
-      color: "text-cyan-400",
-      skills: [
-        { name: "Jira", icon: <SiJira className="w-4 h-4 text-[#0052CC]" /> },
-        { name: "Trello", icon: <SiTrello className="w-4 h-4 text-[#0079BF]" /> },
-        { name: "Asana", icon: <SiAsana className="w-4 h-4 text-[#273347]" /> },
-        { name: "ClickUp", icon: <SiClickup className="w-4 h-4 text-[#7B68EE]" /> },
-        { name: "Slack", icon: <SiSlack className="w-4 h-4 text-[#4A154B]" /> },
-        { name: "Notion", icon: <SiNotion className="w-4 h-4 text-[#000000]" /> },
-        { name: "Teams", icon: <TeamsLogo className="w-4 h-4" /> },
-        { name: "Confluence", icon: <SiConfluence className="w-4 h-4 text-[#172B4D]" /> },
-      ],
-    },
   ];
+  
 
   return (
     <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
@@ -198,7 +164,7 @@ const SkillsSection = () => {
           ))}
         </div>
       </section>
-      <style>{`
+      <style jsx>{`
         @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
         .animate-shimmer { animation: shimmer 2s infinite; }
         .bg-grid-pattern {
