@@ -42,7 +42,7 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-  "Hi, I'm Talha Rana.",
+
 "Turning ideas into meaningful digital impact.",
 "Crafting smart, modern solutions that inspire and perform.",
 "Clean design. Solid engineering.",
@@ -197,7 +197,7 @@ const profile = {
                     I&apos;m
                     <span className="typing-effect gradient-text">
                       
-                      Talha Rana
+                     <br></br>  Talha Rana
                     </span>
                   </span>
                 </h1>
