@@ -42,12 +42,11 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Hi, I'm Talha Rana.",
-    "I build with Flutter.",
-    "One codebase. Every screen.",
-    "Frontend to backend.",
-    "Clean UI. Robust logic.",
-    "Fast. Scalable. Beautiful. End-to-end.",
+  "Hi, I'm Talha Rana.",
+"Turning ideas into meaningful digital impact.",
+"Crafting smart, modern solutions that inspire and perform.",
+"Clean design. Solid engineering.",
+"Fast. Scalable. Beautiful. End-to-end."
   ];
   
   
@@ -55,26 +54,29 @@ export default function Hero() {
   // 'GraphQL', 'Docker', 'AWS','MySQL','Git', 'Linux', 'Discord Development'
   const [code] = useState(`
 const profile = {
-    name: 'Mohi Uddin',
-    title: 'Full-Stack Developer | UI/UX Enthusiast | Problem Solver',
-    skills: [
-        'React', 'NextJS', 'Redux','Tailwind CSS','Bootstrap', 
-        'Express','NodeJS', 'JavaScript','TypeScript','MongoDB', 
-        'Firebase','NextAuth','Graphic design','Figma','UI/UX Design',
-        
-    ],
-    hardWorker: true,
-    quickLearner: true,
-    problemSolver: true,
-    yearsOfExperience: 2, 
-    hireable: function() {
+    name: 'Talha Rana',
+    title: 'Full Stack Developer | Creator of Digital Experiences',
+    traits: {
+        curious: true,
+        reliable: true,
+        problemSolver: true,
+        adaptive: true,
+        growthDriven: true,
+        expert: true,
+    },
+    yearsOfExperience: 5,
+    summary:
+        'Helping people and brands turn ideas into seamless digital solutions — fast, beautiful, and built to last.',
+    hireable() {
         return (
-            this.hardWorker &&
-            this.quickLearner &&
-            this.problemSolver &&
-            this.yearsOfExperience >= 2);
+            this.traits.problemSolver &&
+            this.traits.reliable &&
+            this.traits.expert &&
+            this.yearsOfExperience >= 2
+        );
     }
 };
+
   `);
 
   useEffect(() => {
@@ -216,7 +218,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed capitalize">
-                  A passionate JavaScript developer with a love for creating dynamic and interactive visual websites and web applications.
+                Building modern, impactful digital solutions that transform ideas into seamless experiences — built with care and driven by innovation.
                 </p>
               </div>
 

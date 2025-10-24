@@ -1,21 +1,21 @@
-import HeroImg from "@/assets/images/hero.jpg";
-
+import HeroImg from "@/assets/images/hero.png";
 
 export default function About() {
   return (
     <>
-      <section id="about" className="py-16 md:py-32  text-white bg-[#04081A]">
+      <section id="about" className="py-16 md:py-32 text-white bg-[#04081A]">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-white">
-            Developer, Designer, Creator, Innovator
+            Your digital partner — turning ideas into seamless experiences
           </h2>
+
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
               <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent">
                 <img
                   src={HeroImg}
                   className="rounded-[15px] shadow block"
-                  alt="payments illustration"
+                  alt="hero illustration"
                   width={1207}
                   height={929}
                 />
@@ -24,33 +24,27 @@ export default function About() {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                {`Hello! I'm Talha Rana, a passionate JavaScript developer
-                specializing in creating innovative web solutions and
-                user-friendly interfaces.`}
-                <span className="font-bold text-white">
-                  Using React & Next.js Framework
-                </span>
-                ,{` I'm dedicated to simplifying development workflows.`}
+                {`Hi! I'm Talha Rana, a full-stack developer passionate about crafting modern digital solutions for web, mobile, and beyond.`}
               </p>
+
               <p className="text-white">
-                {`My focus is on making web development faster, easier, and
-                accessible to all developers. Currently, I'm expanding into
-                backend development to grow as a full-stack developer and create
-                seamless, secure web applications.`}
+                {`I focus on creating clean, fast, and scalable experiences that help businesses and individuals bring ideas to life. My work bridges design, development, and strategy — ensuring every project delivers impact.`}
+              </p>
+
+              <p className="text-white">
+                {`As a lifelong learner and problem solver, I embrace new technologies and workflows to stay ahead, providing clients with solutions that are not just functional, but elegant and future-proof.`}
               </p>
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white">
-                   {`I' am a lifelong learner and a dedicated supporter of the developer community, committed to creating new and effective tools and ideas to empower developers. As the creator of the Frontend Developer Squad at app.daily.dev, I am championing new technologies to help developers build better and more efficient applications. I share this knowledge and experience with my community, so that we can all move forward together.`}
+                    {`I’m dedicated to empowering teams and clients alike — sharing knowledge, building smarter solutions, and creating tools that drive real progress.`}
                   </p>
 
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
-                      Mohi Uddin, Creator of the Frontend Developer Squad at 
-                      <a href="https://app.daily.dev/mdmohiuddin" target="_blank" rel="noopener noreferrer" className="text-blue-400"> app.daily.dev</a>
+                      Talha Rana, Developer & Digital Innovator
                     </cite>
-                    
                   </div>
                 </blockquote>
               </div>
