@@ -5,36 +5,33 @@ import PropTypes from "prop-types";
 
 const projects = [
   {
-    title: "Portfolio - Previous Version 🔥",
+    title: "Phone Guard – Anti-Theft Alarm App",
     description:
-      "portfolio A sleek and responsive portfolio website built with React and Tailwind CSS. framer Motion for smooth for animations. design created using figma  💻✨",
-
-    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747502779/w25knkkuhydkv39xfdhx.png",
-    color: "#0be890",
-    githubLink: "https://github.com/MDmohiuddin-web/portfolio",
-    liveLink: "https://mohiuddin-portfolio.vercel.app/",
+      "A smart mobile security app that detects unauthorized movement or access. Includes motion and sound alerts, intruder selfies, WiFi disconnection detection, and 'Find My Phone' via clap or whistle. Built with Flutter, Swift, and Kotlin for seamless cross-platform performance.",
+    link: "/images/projects/phoneguard.png", // replace with your image or app screenshot
+    color: "#FF6B6B",
+    githubLink: "#",
+    liveLink: "#", 
   },
   {
-    title: "FashionFusing  built with React and Tailwind CSS ",
+    title: "Network Analyzer – WiFi Speed & Signal Tester",
     description:
-      "FashionFusing is a fashion e-commerce website built with React and Tailwind CSS. It offers a seamless shopping experience with a wide range of clothing and accessories.",
-
-    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747502995/zppranpjgq653b7ek2lh.png",
-    color: "#8f89ff",
-    githubLink: "https://github.com/MDmohiuddin-web/FashionFusing-Clint",
-    liveLink: "https://fashionfusing.netlify.app/",
+      "An advanced network diagnostics app to test WiFi speed, analyze signal strength, and manage connected devices. Features include real-time ping tests, QR-based WiFi sharing, hotspot control, and data usage tracking with historical insights. Built using Flutter and Firebase.",
+    link: "/images/projects/networkanalyzer.png", // replace with actual screenshot
+    color: "#4F9CF9",
+    githubLink: "#",
+    liveLink: "#",
   },
   
 
   {
-    title: "interior-desigin",
+    title: "Product Scanner – Ingredient & Compliance Checker",
     description:
-      "Landing page for interior design built with React and Tailwind CSS. design created using framer Motion for smooth for animations  💻✨",
-
-    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747503121/rs4ksl4ny18zugirpja4.png",
-    color: "#fff",
-    githubLink: "https://github.com/MDmohiuddin-web/Interior-design-landingpage",
-    liveLink: "https://interior-desigin.netlify.app/",
+      "A barcode recognition and ingredient analysis app that verifies products against dietary and ethical standards. Features include E-code detection, category-based filtering, offline product data, and real-time classification using REST APIs. Focused on accuracy, speed, and consumer safety.",
+    link: "/images/projects/productscanner.png", // replace with your actual image
+    color: "#FF6B6B",
+    githubLink: "#",
+    liveLink: "#",
   },
 
 ];
